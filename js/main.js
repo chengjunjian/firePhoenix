@@ -50,13 +50,14 @@ $(document).ready(function() {
 			{state:'up',frames:{rect:[0,0,64,64]}},
 			{state:'over',frames:{rect:[64,0,64,64,70,70]}},
 			{state:'down',frames:{rect:[128,0,64,64]}},
+			{state:'move',frames:{rect:[128,0,64,64]}},
 			{state:'disabled',frames:{rect:[192,0,64,64]}},
 			{state:'shodwn',frames:{rect:[192,0,64,64]}},
 			{state:fp.atom.EState.SELECTED,frames:[
-				{rect:[192,0,64,64]},
-				{rect:[192,3,64,64]},
-				{rect:[195,3,64,64]},
-				{rect:[195,0,64,64]}
+				{rect:[64,0,64,64]},
+				{rect:[64,3,64,64]},
+				{rect:[64,3,64,64]},
+				{rect:[64,0,64,64]}
 				]
 			}
 		]
@@ -87,7 +88,7 @@ $(document).ready(function() {
 		btn_centersub2.changeState(fp.atom.EState.SHODWN);
 		btn_centersub2.zIndex = 1;
 		stage.addChild(btn_centersub2);
-		btn_centersub1.shodwn = btn_centersub2;
+		//btn_centersub1.shodwn = btn_centersub2;
 
 		btn_centersub1.bind(touchstart,function(e) {
 			E.log('touchstart');
