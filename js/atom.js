@@ -113,8 +113,8 @@ atom.prototype.calcSubAtom = function(isshow) {
 		//this.parent.addChild(sub);
 		//this.addChild(sub);
 		//todo:生成一个影子
-		//sub.shodwn.x = xn;
-		//sub.shodwn.y = yn;
+		sub.shodwn.x = xn;
+		sub.shodwn.y = yn;
 
 		sumRoate += ro * fangxiang;
 	}

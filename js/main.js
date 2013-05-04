@@ -63,8 +63,24 @@ $(document).ready(function() {
 		]
 	};
 
-	btnConf.name = '';
-	var btn_center = new fp.atom(btnConf);
+	//btnConf.name = '';
+
+
+	var btnCenterConf = {
+		id:"btn_center",
+		visible:true,
+		image:E.IMG.get('goldring_128.png'), 
+		x:cx - 64, y:cy - 64,width:128, height:128,states: [ 
+			{state:'up',frames:{rect:[0,0,128,128]}},
+			{state:'over',frames:{rect:[0,0,128,128]}},
+			{state:'down',frames:{rect:[0,0,128,128]}},
+			{state:'move',frames:{rect:[0,0,128,128]}},
+			{state:'shodwn',frames:{rect:[0,0,128,128]}}
+		]
+	};
+
+	btnCenterConf.name = '';
+	var btn_center = new fp.atom(btnCenterConf);
 	btn_center.visible = true;
 	stage.addChild(btn_center);
 	btn_cr = 32;
@@ -88,7 +104,7 @@ $(document).ready(function() {
 		btn_centersub2.changeState(fp.atom.EState.SHODWN);
 		btn_centersub2.zIndex = 1;
 		stage.addChild(btn_centersub2);
-		//btn_centersub1.shodwn = btn_centersub2;
+		btn_centersub1.shodwn = btn_centersub2;
 
 		btn_centersub1.bind(touchstart,function(e) {
 			E.log('touchstart');
